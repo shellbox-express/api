@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "/home/fbidu/.local/share/virtualenvs/hackathon_raizen-JAvL_no5/bin/python",
+    "python.formatting.provider": "black"
+}

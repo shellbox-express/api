@@ -1,0 +1,313 @@
+[{
+        "Descricao": "Indeterminado",
+        "Tipo": "Todos",
+        "Categoria_Posto": 1,
+        "CategoriaID": 0,
+        "Categoria_Loja": 1,
+        "Nome": "Indeterminado"
+    },
+    {
+        "Descricao": "Gasolina de Motor",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 1,
+        "Categoria_Loja": 0,
+        "Nome": "Gasolina de Motor"
+    },
+    {
+        "Descricao": "Oleo Combustível Automotivos",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 2,
+        "Categoria_Loja": 0,
+        "Nome": "Oleo Combustível Automotivos"
+    },
+    {
+        "Descricao": "Outros Combustíveis Alternativ",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 3,
+        "Categoria_Loja": 0,
+        "Nome": "Outros Combustíveis Alternativ"
+    },
+    {
+        "Descricao": "Lubrificantes",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 4,
+        "Categoria_Loja": 1,
+        "Nome": "Lubrificantes"
+    },
+    {
+        "Descricao": "Produtos de Pista",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 5,
+        "Categoria_Loja": 1,
+        "Nome": "Produtos de Pista"
+    },
+    {
+        "Descricao": "Comida",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 6,
+        "Categoria_Loja": 1,
+        "Nome": "Comida"
+    },
+    {
+        "Descricao": "Tabaco",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 7,
+        "Categoria_Loja": 1,
+        "Nome": "Tabaco"
+    },
+    {
+        "Descricao": "Cartões Telefônicos",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 8,
+        "Categoria_Loja": 1,
+        "Nome": "Cartões Telefônicos"
+    },
+    {
+        "Descricao": "Não Comida",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 9,
+        "Categoria_Loja": 1,
+        "Nome": "Não Comida"
+    },
+    {
+        "Descricao": "Bebidas Não Alcoólicas",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 10,
+        "Categoria_Loja": 1,
+        "Nome": "Bebidas Não Alcoólicas"
+    },
+    {
+        "Descricao": "Bebidas Alcoólicas",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 11,
+        "Categoria_Loja": 1,
+        "Nome": "Bebidas Alcoólicas"
+    },
+    {
+        "Descricao": "Balas, Biscoitos e Petiscos",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 12,
+        "Categoria_Loja": 1,
+        "Nome": "Balas,Biscoitos Petiscos"
+    },
+    {
+        "Descricao": "Mercearia",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 13,
+        "Categoria_Loja": 1,
+        "Nome": "Mercearia"
+    },
+    {
+        "Descricao": "Perecíveis",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 14,
+        "Categoria_Loja": 1,
+        "Nome": "Perecíveis"
+    },
+    {
+        "Descricao": "Diesel",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 15,
+        "Categoria_Loja": 0,
+        "Nome": "DIESEL"
+    },
+    {
+        "Descricao": "Etanol",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 16,
+        "Categoria_Loja": 0,
+        "Nome": "ETANOL"
+    },
+    {
+        "Descricao": "Gasolina",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 17,
+        "Categoria_Loja": 0,
+        "Nome": "GASOLINA"
+    },
+    {
+        "Descricao": "Todos",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 18,
+        "Categoria_Loja": 1,
+        "Nome": "Todos"
+    },
+    {
+        "Descricao": "Pit Stop",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 19,
+        "Categoria_Loja": 1,
+        "Nome": "Pit Stop"
+    },
+    {
+        "Descricao": "Regional Loja",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 20,
+        "Categoria_Loja": 1,
+        "Nome": "Cadastro local prod. Loja"
+    },
+    {
+        "Descricao": "Regional-Pista",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 21,
+        "Categoria_Loja": 0,
+        "Nome": "Regional-Pista"
+    },
+    {
+        "Descricao": "Especifica para Diesel S500",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 22,
+        "Categoria_Loja": 0,
+        "Nome": "DIESEL S500"
+    },
+    {
+        "Descricao": "Especifica para Diesel S-10",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 23,
+        "Categoria_Loja": 0,
+        "Nome": "DIESEL S10"
+    },
+    {
+        "Descricao": "GASOLINA ADITIVADA",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 24,
+        "Categoria_Loja": 0,
+        "Nome": "GASOLINA ADITIVADA"
+    },
+    {
+        "Descricao": "DIESEL ADITIVADO",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 25,
+        "Categoria_Loja": 0,
+        "Nome": "DIESEL ADITIVADO"
+    },
+    {
+        "Descricao": "Etanol Comum - Xingu",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 26,
+        "Categoria_Loja": 0,
+        "Nome": "ETANOL COMUM"
+    },
+    {
+        "Descricao": "Gasolina Comum Xingu",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 27,
+        "Categoria_Loja": 0,
+        "Nome": "GASOLINA COMUM"
+    },
+    {
+        "Descricao": "Diesel Comum - Xingu",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 28,
+        "Categoria_Loja": 0,
+        "Nome": "DIESEL COMUM"
+    },
+    {
+        "Descricao": "produto aviação",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 29,
+        "Categoria_Loja": 0,
+        "Nome": "JET A1"
+    },
+    {
+        "Descricao": "AVIAÇÃO",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 30,
+        "Categoria_Loja": 0,
+        "Nome": "AVGAS"
+    },
+    {
+        "Descricao": "AVIAÇÃO",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 31,
+        "Categoria_Loja": 0,
+        "Nome": "AEROJET A1"
+    },
+    {
+        "Descricao": "DIESEL MARITIMO",
+        "Tipo": "Posto",
+        "Categoria_Posto": 1,
+        "CategoriaID": 32,
+        "Categoria_Loja": 0,
+        "Nome": "DIESEL MARITIMO"
+    },
+    {
+        "Descricao": "Padaria",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 33,
+        "Categoria_Loja": 1,
+        "Nome": "Padaria"
+    },
+    {
+        "Descricao": "Confeitaria",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 34,
+        "Categoria_Loja": 1,
+        "Nome": "Confeitaria"
+    },
+    {
+        "Descricao": "Massa Show",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 35,
+        "Categoria_Loja": 1,
+        "Nome": "Massa Show"
+    },
+    {
+        "Descricao": "CIGARRO POPULAR",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 36,
+        "Categoria_Loja": 1,
+        "Nome": "CIGARRO POPULAR"
+    },
+    {
+        "Descricao": "CIGARRO PREMIUM",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 37,
+        "Categoria_Loja": 1,
+        "Nome": "CIGARRO PREMIUM"
+    },
+    {
+        "Descricao": "CIGARRO REGULAR",
+        "Tipo": "Loja",
+        "Categoria_Posto": 0,
+        "CategoriaID": 38,
+        "Categoria_Loja": 1,
+        "Nome": "CIGARRO REGULAR"
+    }
+]

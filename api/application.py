@@ -1,5 +1,6 @@
 from os import environ
 from flask import Flask, request, jsonify
+from .agent import Agent
 from .watson import Watson
 from .wrapper import Wrapper
 
@@ -38,6 +39,11 @@ def voice():
         return "Watson error!", 500
 
     output_text = r["output"]["generic"][0]["text"]
+    agent = Agent(app.config['client_id'], app.config['client_secret'])
+    processed_output = agent.proccess_watson(output_text)
+
+    if processed_output:
+        output_text = processed_output
     
     response = {
         "output": output_text,
@@ -45,6 +51,15 @@ def voice():
     }
     return jsonify(response)
 
+@app.route("/purchases")
+def purchases():
+    data = [
+        {"date": "24/03/2019", "price": 20.45, "station": "Santa Fé", "qtd": 1},
+        {"date": "24/03/2019", "price": 50.90, "station": "Piracicaba", "qtd": 3},
+        {"date": "24/03/2019", "price": 15.00, "station": "Raízes", "qtd": 5}
+    ]
+
+    return jsonify(data)
 
 @app.route("/loc")
 def loc():
