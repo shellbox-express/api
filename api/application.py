@@ -30,10 +30,20 @@ def voice():
     text = data["text"]
     context = data.get("context")
 
-    w = Watson(app.config["watson_key"], app.config["workspace_id"])
-    r = w.messsage(text, context)
+    try:
+        w = Watson(app.config["watson_key"], app.config["workspace_id"])
+        r = w.messsage(text, context)
+        assert r
+    except:
+        return "Watson error!", 500
 
-    return jsonify(r)
+    output_text = r["output"]["generic"][0]["text"]
+    
+    response = {
+        "output": output_text,
+        "context": r["context"]
+    }
+    return jsonify(response)
 
 
 @app.route("/loc")
