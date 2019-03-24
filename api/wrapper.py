@@ -9,6 +9,7 @@ class Wrapper:
 
     def __init__(self, client_id, client_secret, base_url):
         self.client_id = client_id
+        self.base_url = base_url
         self.auth = Auth(client_id, client_secret)
         self._acquire_token()
 
@@ -29,4 +30,4 @@ class Wrapper:
 
         caller = getattr(requests, method.lower())
 
-        return caller(endpoint, headers=headers)
+        return caller(self.base_url + endpoint, headers=headers)
