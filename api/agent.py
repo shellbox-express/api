@@ -5,7 +5,7 @@ from .models import Purchase
 class Agent:
 
     messages = {
-        "nearest_store": "A loja Shell Select mais próxima que possui seu produto está há {dist} quilômetros. Deseja ir até lá?",
+        "nearest_store": "A loja Shell Select mais próxima que possui seu {product} está há {dist} quilômetros. Deseja ir até lá?",
         "confirm_purchase": "Sua compra no valor de {price} reais foi confirmada. Você chegará na loja em {min} minutos"
     }
 
@@ -47,5 +47,5 @@ class Agent:
             store = self.locate_product(product)
             dist = store["distance"]
 
-            return self.messages["nearest_store"].format(dist=dist)
+            return self.messages["nearest_store"].format(dist=dist, product=product)
 
