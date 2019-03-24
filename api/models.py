@@ -14,10 +14,17 @@ class BaseModel(Model):
         database = db
 
 class Purchase(BaseModel): 
-    date = DateField() 
+    date = DateTimeField() 
     price = FloatField() 
     qtd = IntegerField() 
-    station = CharField() 
+    station = CharField()
+    product = CharField()
     
     class Meta: 
         table_name = "purchases"
+
+class LastProduct(BaseModel):
+    name = CharField()
+
+    class Meta:
+        table_name = "last_product"

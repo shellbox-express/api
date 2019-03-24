@@ -15,6 +15,7 @@ watson-developer-cloud = "*"
 peewee = "*"
 mysql-connector-python = "*"
 pymysql = "*"
+redis = "*"
 
 [requires]
 python_version = "3"

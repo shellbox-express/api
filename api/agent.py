@@ -1,12 +1,13 @@
 from datetime import datetime
 from random import randint
-from .models import Purchase
+from .models import LastProduct, Purchase
+
 
 class Agent:
 
     messages = {
         "nearest_store": "A loja Shell Select mais próxima que possui seu {product} está há {dist} quilômetros. Deseja ir até lá?",
-        "confirm_purchase": "Sua compra no valor de {price} reais foi confirmada. Você chegará na loja em {min} minutos"
+        "confirm_purchase": "Sua compra no valor de {price} reais foi confirmada. Você chegará na loja em {min} minutos",
     }
 
     def __init__(self, client_id, client_secret):
@@ -18,11 +19,18 @@ class Agent:
         return {"name": "Posto Santa Fé", "distance": 10}
 
     def confirm_purchase(self, product_id=10, store_id=20):
-        price = randint(5,50)
-        min_ = randint(3,20)
-        qtd = randint(1,5)
+        price = randint(5, 50)
+        min_ = randint(3, 20)
+        qtd = randint(1, 5)
 
-        p = Purchase(date=datetime.now(), qtd=qtd, price=price, station="Santa Fé")
+        lp = LastProduct().select()[-1]
+        p = Purchase(
+            date=datetime.now(),
+            qtd=qtd,
+            price=price,
+            station="Santa Fé",
+            product=lp.name
+        )
         try:
             p.save()
         except:
@@ -44,6 +52,13 @@ class Agent:
 
         if function == "searchSelect":
             product = message.split()[-1]
+            lp = LastProduct(name=product)
+
+            try:
+                lp.save()
+            except:
+                pass
+
             store = self.locate_product(product)
             dist = store["distance"]
 
