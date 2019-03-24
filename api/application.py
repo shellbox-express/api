@@ -62,7 +62,7 @@ def voice():
 def purchases():
     data = Purchase.select()
     data = [
-        {"date": i.date, "price": i.price, "station": i.station, "qtd": i.qtd, "product": i.product}
+        {"date": i.date, "price": i.price, "station": i.station, "qtd": i.qtd, "product": i.product, "eta":i.eta}
         for i in data
     ]
     

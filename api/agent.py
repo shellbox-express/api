@@ -29,7 +29,8 @@ class Agent:
             qtd=qtd,
             price=price,
             station="Santa Fé",
-            product=lp.name
+            product=lp.name,
+            eta=10
         )
         try:
             p.save()

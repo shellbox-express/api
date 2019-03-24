@@ -19,6 +19,7 @@ class Purchase(BaseModel):
     qtd = IntegerField() 
     station = CharField()
     product = CharField()
+    eta = IntegerField()
     
     class Meta: 
         table_name = "purchases"
