@@ -3,7 +3,8 @@ from flask import Flask, request, jsonify
 from .wrapper import Wrapper
 
 app = Flask(__name__)
-
+app.config["client_id"] = environ.get("CLIENT_ID")
+app.config["client_secret"] = environ.get("CLIENT_SECRET")
 
 @app.route("/")
 def home():
@@ -27,6 +28,4 @@ def loc():
     return jsonify(r.json())
 
 if __name__ == "__main__":
-    app.config["client_id"] = environ.get("CLIENT_ID")
-    app.config["client_secret"] = environ.get("CLIENT_SECRET")
     app.run(debug=True)
