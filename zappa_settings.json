@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "app_function": "api.application.app",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "hackathon-raize",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-mg5krxuzq"
+    }
+}
