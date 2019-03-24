@@ -1,3 +1,7 @@
+from datetime import datetime
+from random import randint
+from .models import Purchase
+
 class Agent:
 
     messages = {
@@ -14,8 +18,17 @@ class Agent:
         return {"name": "Posto Santa Fé", "distance": 10}
 
     def confirm_purchase(self, product_id=10, store_id=20):
-        # TODO: UNMOCK!
-        return {"price": 20, "min": 8}
+        price = randint(5,50)
+        min_ = randint(3,20)
+        qtd = randint(1,5)
+
+        p = Purchase(date=datetime.now(), qtd=qtd, price=price, station="Santa Fé")
+        try:
+            p.save()
+        except:
+            raise
+
+        return {"price": price, "min": min_}
 
     def proccess_watson(self, input):
         # GAMBIARRA!!!

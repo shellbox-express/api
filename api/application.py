@@ -1,6 +1,7 @@
 from os import environ
 from flask import Flask, request, jsonify
 from .agent import Agent
+from .models import Purchase
 from .watson import Watson
 from .wrapper import Wrapper
 
@@ -10,9 +11,10 @@ app.config["client_secret"] = environ.get("CLIENT_SECRET")
 app.config["watson_key"] = environ.get("WATSON_KEY")
 app.config["workspace_id"] = environ.get("WORKSPACE_ID")
 
+
 @app.route("/")
 def home():
-    print(app.config['client_id'])
+    print(app.config["client_id"])
     return "Shell Box Express"
 
 
@@ -39,36 +41,39 @@ def voice():
         return "Watson error!", 500
 
     output_text = r["output"]["generic"][0]["text"]
-    agent = Agent(app.config['client_id'], app.config['client_secret'])
+    agent = Agent(app.config["client_id"], app.config["client_secret"])
     processed_output = agent.proccess_watson(output_text)
 
     if processed_output:
         output_text = processed_output
-    
-    response = {
-        "output": output_text,
-        "context": r["context"]
-    }
+
+    response = {"output": output_text, "context": r["context"]}
     return jsonify(response)
+
 
 @app.route("/purchases")
 def purchases():
+    data = Purchase.select().limit(10)
     data = [
-        {"date": "24/03/2019", "price": 20.45, "station": "Santa Fé", "qtd": 1},
-        {"date": "24/03/2019", "price": 50.90, "station": "Piracicaba", "qtd": 3},
-        {"date": "24/03/2019", "price": 15.00, "station": "Raízes", "qtd": 5}
+        {"date": i.date, "price": i.price, "station": i.station, "qtd": i.qtd}
+        for i in data
     ]
-
+    
     return jsonify(data)
+
 
 @app.route("/loc")
 def loc():
-    wrapper = Wrapper(app.config['client_id'], app.config['client_secret'],
-                      "https://api-hackaraizen.sensedia.com/sandbox/gestao-lojas/v1")
+    wrapper = Wrapper(
+        app.config["client_id"],
+        app.config["client_secret"],
+        "https://api-hackaraizen.sensedia.com/sandbox/gestao-lojas/v1",
+    )
 
     r = wrapper.call("/lojas-localizacoes/lojas-localizacoes?_offset=0&_limit=10")
     r.raise_for_status()
     return jsonify(r.json())
+
 
 if __name__ == "__main__":
     app.run(debug=True)
