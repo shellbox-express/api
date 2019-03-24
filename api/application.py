@@ -47,7 +47,13 @@ def voice():
     if processed_output:
         output_text = processed_output
 
+    
     response = {"output": output_text, "context": r["context"]}
+
+    if "foi confirmada" in output_text:
+        response["lat"] = -22.715079
+        response["lng"] = -47.647826
+
     return jsonify(response)
 
 

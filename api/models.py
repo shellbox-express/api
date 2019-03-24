@@ -7,6 +7,8 @@ db = MySQLDatabase(
     host=host, port=3303, passwd="shellshell", user="shell", database="shell"
 )
 
+db.connect()
+
 class BaseModel(Model):
     class Meta:
         database = db

@@ -26,7 +26,7 @@ class Agent:
         try:
             p.save()
         except:
-            raise
+            pass
 
         return {"price": price, "min": min_}
 
